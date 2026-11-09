@@ -1,7 +1,7 @@
 [project]
 name = "api-detection-project"
 version = "0.1.0"
-description = "Add your description here"
+description = "Rule-based analysis and risk scoring for API requests"
 readme = "README.md"
 authors = [
     { name = "Bradley Ryan", email = "bradley.wally.ryan@gmail.com" }
