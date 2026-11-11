@@ -55,7 +55,7 @@ Benign intent can still trigger a pattern: `ticket-command-example` quotes
 in training material. They intentionally remain labeled benign, exposing false
 positives without changing detector behavior.
 
-## Current frozen-engine results
+## Evaluation results
 
 | Request outcome | Count |
 | --- | ---: |
@@ -75,7 +75,7 @@ The sole unflagged attack is the Windows single-ampersand shell command
 recognize both separator styles, SQL tautologies and UNION SELECT with comment
 whitespace, and selected shell operators with named or Unix absolute commands.
 Request-level recall is 13/14 (92.9%); the false-positive rate is 2/14 benign
-requests (14.3%). These are results for the current frozen working tree.
+requests (14.3%). These results describe the current synthetic fixture set.
 
 `combined-traversal-and-sql` matches both expected rules and scores 100
 (`Malicious`). `combined-sql-and-shell-partial` expects SQL_001 and CMD_001,
@@ -85,6 +85,5 @@ total 16 because each mixed request expects two. The runner reports results;
 misses and false positives do not themselves cause a nonzero exit status.
 
 These fixtures provide a small synthetic coverage check, not a production
-accuracy estimate. This submission documentation update does not change the
-detector, scoring, tests, evaluation runner, or fixtures. The complete unit suite
-passes 19 tests; see the root README for the test command and architecture.
+accuracy estimate. The complete unit suite passed 19 tests at the documented
+baseline; see the root README for the test command and architecture.
