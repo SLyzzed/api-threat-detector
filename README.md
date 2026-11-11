@@ -1,6 +1,6 @@
 # API Threat Detector
 
-A Python command-line tool for examining captured API requests and explaining potentially malicious input. It uses independent, technique-focused rules and a deterministic 0–100 risk score.
+A Python command-line tool for examining captured API requests and explaining potentially malicious input. It uses independent, technique-focused rules and a deterministic 0–100 risk score. This project was developed with AI assistance, with the long-term goal of integrating it into my cybersecurity homelab as an additional API threat-detection layer.
 
 The goal is to make detection logic **understandable, testable, and extensible**, rather than to present a production-ready WAF. The tool analyzes JSON requests offline: it does **not** intercept live traffic, execute payloads, or block requests.
 
