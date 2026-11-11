@@ -6,6 +6,7 @@ from .request_fields import request_strings
 
 _SHELL_COMMAND = re.compile(
     r"(?:&&|\|\||[;|]|\$\()\s*"
+    r"(?:/(?:[^\s/;&|()]+/)*)?"
     r"(?P<command>whoami|id|cat|curl|wget|bash|sh|cmd(?:\.exe)?|powershell(?:\.exe)?)"
     r"(?=\s|[;|&)]|$)",
     re.IGNORECASE,

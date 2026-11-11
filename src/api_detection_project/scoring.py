@@ -6,6 +6,7 @@ from .models import DetectionFinding
 SIGNAL_WEIGHTS = {
     ("PATH_001", "parent_directory_segment"): 65,
     ("SQL_001", "boolean_tautology"): 70,
+    ("SQL_001", "union_select"): 70,
     ("CMD_001", "shell_operator_with_command"): 75,
 }
 

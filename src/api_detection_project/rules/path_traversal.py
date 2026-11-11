@@ -5,9 +5,14 @@ from ..models import APIRequest, DetectionFinding
 
 
 def detect(request: APIRequest) -> list[DetectionFinding]:
-    decoded_path = unquote(request.path)
+    decoded_path = request.path
+    for _ in range(2):
+        next_path = unquote(decoded_path)
+        if next_path == decoded_path:
+            break
+        decoded_path = next_path
 
-    if ".." not in decoded_path.split("/"):
+    if ".." not in decoded_path.replace("\\", "/").split("/"):
         return []
 
     return [
