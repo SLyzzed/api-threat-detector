@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Rule-based analysis and risk scoring for API requests"
 readme = "README.md"
 authors = [
-    { name = "Bradley Ryan", email = "bradley.wally.ryan@gmail.com" }
+    { name = "Bradley Ryan" }
 ]
 requires-python = ">=3.14"
 dependencies = [
